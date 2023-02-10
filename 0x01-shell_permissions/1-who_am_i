@@ -1,4 +1,5 @@
 #!/bin/bash
-echo "The effective username of the current user is: $(whoami)"
+username=$(whoami)
+echo "The effective username of the current user is: $username"
 
 
