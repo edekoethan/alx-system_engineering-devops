@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Best School" > \\\*\\\\"'\"Best School\"\\'\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)
+echo "Best School" > "\*\\'"Best School"\'\\*$\?\*\*\*\*\*:)" | sed 's/[^a-zA-Z0-9 ]//g'
