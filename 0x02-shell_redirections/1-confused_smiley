@@ -1,2 +1,2 @@
-#!/bin/bash
-echo -e "\033[0;36m(Ôo)\033[0m"
+#!/bin/bash#!
+echo "\"(Ôo)'"
