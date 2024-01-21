@@ -1,0 +1,44 @@
+Duration:
+Start Time: 2024-01-21 15:30 UTC
+End Time: 2024-01-21 18:45 UTC
+Impact:
+The user authentication service experienced a complete outage, affecting 80% of users. Users were unable to log in, leading to disruptions in accessing critical features and services.
+Root Cause:
+The outage was caused by an unanticipated surge in traffic due to a marketing campaign. This caused a database connection pool exhaustion, leading to the inability of the authentication service to process login requests.
+Timeline:
+
+15:30 UTC: Issue Detected
+A surge in error rates for authentication requests was detected by the monitoring system.
+15:45 UTC: Issue Identification
+Engineers investigated the increased error rates and identified the authentication service as the root cause.
+16:00 UTC: Assumption on Root Cause
+Initial assumption suggested a potential issue with the authentication service's code or the underlying database.
+16:30 UTC: Misleading Path
+Investigation focused on code and database optimizations, leading to no significant findings.
+17:00 UTC: Escalation
+The incident was escalated to the database and infrastructure teams for a comprehensive investigation.
+18:00 UTC: Corrective Actions
+The database team identified the connection pool exhaustion as the issue, causing the authentication service to be unresponsive.
+18:30 UTC: Resolution
+Temporary relief was achieved by scaling up the database connection pool and optimizing existing queries.
+Root Cause and Resolution:
+
+Root Cause:
+The surge in traffic from the marketing campaign exceeded the capacity of the database connection pool. As a result, authentication service requests were being rejected, leading to the outage.
+Resolution:
+The database connection pool was increased to handle the sudden influx of requests. Long-term solutions involved optimizing database queries and implementing a more scalable architecture to handle future traffic spikes.
+Corrective and Preventative Measures:
+
+Improvements/Fixes:
+
+Implement auto-scaling for critical services to dynamically adjust resources based on demand.
+Enhance monitoring to provide early detection of traffic spikes and potential resource exhaustion.
+Review and optimize database queries to prevent connection pool exhaustion during high-traffic events.
+Tasks to Address the Issue:
+
+Implement automated scaling policies for the authentication service to handle varying workloads.
+Conduct a comprehensive review of the database schema and queries to identify potential bottlenecks.
+Enhance monitoring alerts to provide more detailed information on service-specific metrics.
+Establish communication channels for cross-team collaboration during incidents to facilitate quicker resolutions.
+This incident postmortem underscores the importance of anticipating and preparing for unexpected increases in user traffic. The corrective measures aim to improve the system's resilience and responsiveness while the preventative measures focus on proactively identifying and addressing potential issues before they impact users. The collaborative effort among teams and the implementation of enhanced monitoring are crucial steps towards building a more robust and reliable web stack infrastructure.
+
